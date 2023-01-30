@@ -25,7 +25,6 @@ const GridItem = (props) => {
 			<div className='flex flex-col justify-center sm:items-center md:items-start text-justify space-y-2 dark:text-darkThemeTextLight font-light'>
 				<h1 className='font-normal text-xl'>{props.name}</h1>
 				<p className='text-base flex space-x-1'><span>{props.address}</span> <b>|</b> <span>{props.dob}</span></p>
-				{/*<p className='text-base'>{props.dob}</p>*/}
 				<p className='text-base flex space-x-2'><span>{props.gender}</span><span>|</span><span>{props.class}</span></p>
 			</div>
 		</div>
