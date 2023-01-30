@@ -7,6 +7,8 @@ import Pagination from './pagination';
 import GridItem from './grid-item';
 
 const ListStudents = () => {
+
+    
 	const [currentPage, setCurrentPage] = useState(1);
 	const [itemsPerPage, setItemsPerPage] = useState(10);
 	const [viewType, setViewType] = useState('list');
