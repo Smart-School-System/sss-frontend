@@ -17,6 +17,7 @@ const ListStudents = () => {
 
 	const paginate = (pageNumber) => {
 		setCurrentPage(pageNumber);
+        
 	};
 	return (
 		<div>
