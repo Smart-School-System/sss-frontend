@@ -10,7 +10,7 @@ const ListStudents = () => {
 	const [currentPage, setCurrentPage] = useState(1);
 	const [itemsPerPage, setItemsPerPage] = useState(10);
 	const [viewType, setViewType] = useState('list');
- 
+
 	const indexOfLastItem = currentPage * itemsPerPage;
 	const indexOfFirstItem = indexOfLastItem - itemsPerPage;
 	const currentItems = listData.slice(indexOfFirstItem, indexOfLastItem);
