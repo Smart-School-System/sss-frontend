@@ -20,7 +20,7 @@ const ListStudents = () => {
 	};
 	return (
 		<div>
-			<div className='flex items-center justify-between my-5               '>
+			<div className='flex items-center justify-between my-5'>
 				<Filters viewType={viewType} setViewType={setViewType}/>
 				<Pagination itemsPerPage={itemsPerPage} totalItems={listData.length} paginate={paginate} perPage={setItemsPerPage}/>
 			</div>
