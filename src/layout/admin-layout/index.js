@@ -14,7 +14,7 @@ const AdminLayout = ({ children }) => {
 			<SideNav toggler={toggle}/>
 			<div className='content w-full' style={{marginLeft: isCollapsed ? '80px' : '260px'}}>
 				<Navbar leftValue={isCollapsed ? '80px' : '280px'}/>
-				<main className='mt-10 w-full h-auto'>
+				<main className='mt-10 w-full min-h-screen h-auto'>
 					{children}
 				</main>
 			</div>
