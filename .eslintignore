@@ -1,0 +1,9 @@
+    /node_modules
+    /dist
+    /build
+    build
+    .next
+    .env
+
+    /build
+/src/dist

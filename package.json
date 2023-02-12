@@ -1,0 +1,76 @@
+{
+    "name": "smart-school-frontend",
+    "version": "0.1.0",
+    "private": true,
+    "main": "public/electron.js",
+    "homepage": "./",
+    "dependencies": {
+        "@craco/craco": "^7.0.0",
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "antd": "^5.1.6",
+        "electron-reload": "^2.0.0-alpha.1",
+        "electron-watch": "^1.0.9",
+        "flowbite": "^1.6.3",
+        "flowbite-datepicker": "^1.2.2",
+        "flowbite-react": "^0.3.8",
+        "joi": "^17.7.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-icons": "^4.7.1",
+        "react-router-dom": "^6.6.2",
+        "react-scripts": "5.0.1"
+    },
+    "scripts": {
+        "start": "tailwindcss -i ./src/index.css -o ./src/dist/output.css && react-scripts start",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "build": "react-scripts build",
+        "craco-build": "craco build",
+        "dev": "craco build && electron .",
+        "tailwind-watch": "tailwindcss -i ./src/index.css -o ./src/dist/output.css --watch",
+        "prepare": "husky install",
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix --ext .js,.jsx ."
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/eslint-parser": "^7.19.1",
+        "electron": "^22.0.2",
+        "eslint": "^8.33.0",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-import": "^2.27.5",
+        "eslint-plugin-json": "^3.1.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.32.2",
+        "husky": "^8.0.3",
+        "react-redux": "^8.0.5",
+        "redux": "^4.2.1",
+        "redux-devtools-extension": "^2.13.9",
+        "redux-thunk": "^2.4.2",
+        "tailwindcss": "^3.2.4",
+        "webpack-node-externals": "^3.0.0"
+    },
+    "lint-staged": {
+        "./src/**/*.{js,html,css}": "prettier --write",
+        "./src/**/*.{js}": "eslint"
+    }
+}

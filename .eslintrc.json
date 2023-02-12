@@ -1,0 +1,41 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": [
+        "react-app",
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "overrides": [],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "js": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "parser": "@babel/eslint-parser"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "react/prop-types": "off",
+        "react/no-unescaped-entities": 0,
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
+}
