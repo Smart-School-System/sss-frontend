@@ -4,13 +4,11 @@
 }
 
 .content{
-    margin-left: 280px;
-    max-width: calc(100% - 200px);
-    padding: 120px 50px;
-    padding-bottom: 0;
+    /*margin-left: 300px;*/
+    /*max-width: calc(100% - 200px);*/
+    padding: 140px 50px;
+    padding-bottom: 30px;
     transition: all 0.8s;
-}
-
-.collapsed {
-    
+    min-height: 100vh;
+    overflow-x: hidden;
 }
