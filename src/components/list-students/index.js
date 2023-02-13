@@ -33,7 +33,6 @@ const ListStudents = () => {
 						<ListItem key={_} id={item.id} name={item.name} gender={item.gender} class={item.class} dob={item.dob} address={item.address} /> 
 				)
 			}
-            
 			<div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pb-12'>
 				{
 					currentItems.map((item, _) =>
