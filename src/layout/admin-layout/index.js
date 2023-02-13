@@ -12,9 +12,9 @@ const AdminLayout = ({ children }) => {
 	return (
 		<div className='layout dark:bg-darkTheme4'>
 			<SideNav toggler={toggle}/>
-			<div className='content w-full' style={{marginLeft: isCollapsed ? '80px' : '260px'}}>
+			<div className='content w-full' style={{marginLeft: isCollapsed ? '90px' : '290px'}}>
 				<Navbar leftValue={isCollapsed ? '80px' : '280px'}/>
-				<main className='mt-10 w-full min-h-screen h-auto'>
+				<main className='w-full'>
 					{children}
 				</main>
 			</div>

@@ -3,7 +3,7 @@ import Joi from 'joi';
 export const studentSchema = Joi.object({
 	firstname: Joi.string().required(),
 	lastname:  Joi.string().required(),
-	othername:  Joi.string().required(),
+	othername:  Joi.string(),
 	dob:  Joi.string().required(),
 	gender:  Joi.string().required(),
 	religion:  Joi.string().required(),
