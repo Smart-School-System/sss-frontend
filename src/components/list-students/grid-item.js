@@ -7,7 +7,7 @@ const GridItem = (props) => {
 	const [isPopped, setIsPopped] = useState(false);
 	return (
 		<div className='grid sm:grid-rows-2 sm:grid-cols-none md:grid-cols-2 md:grid-rows-none w-full p-4 justify-start rounded-2xl relative shadow-custom dark:shadow-none dark:border-[1px] dark:border-darkThemeTextLight/50'>
-			{/* Hoverable dropdown */}
+			{/* Hoverable dropdown component */}
 			<div className='flex-[1] absolute top-5 right-5 flex justify-end items-center cursor-pointer bg-gray-200/75 dark:bg-darkTheme2 rounded-xl p-1 text-darkThemeTextLight/95 dark:text-darkThemeTextLight/50' onMouseEnter={() => setIsPopped(true)} onMouseLeave={() => setIsPopped(false)}>
 				<BsThreeDotsVertical />
 				<div className={`${!isPopped && 'hidden'} flex-col space-y-3 bg-white dark:bg-darkTheme1 border-transparent dark:border-darkTheme3 absolute top-[24px] -right-[50px] drop-shadow-md w-fit h-auto p-2 rounded-lg`}>
@@ -20,7 +20,7 @@ const GridItem = (props) => {
 					</span>
 				</div>
 			</div>
-
+ 
 			<img src={user} alt="user profile pic" className='w-full h-auto rounded-full p-4' />
 			<div className='flex flex-col justify-center sm:items-center md:items-start text-justify space-y-2 dark:text-darkThemeTextLight font-light'>
 				<h1 className='font-normal text-xl'>{props.name}</h1>

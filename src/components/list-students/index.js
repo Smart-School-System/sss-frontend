@@ -5,8 +5,8 @@ import ListHeader from './list-header';
 import Filters from './filters';
 import Pagination from './pagination';
 import GridItem from './grid-item';
-
-const ListStudents = () => {
+ 
+const ListStudents = () => { 
 	const [currentPage, setCurrentPage] = useState(1);
 	const [itemsPerPage, setItemsPerPage] = useState(10);
 	const [viewType, setViewType] = useState('list');
@@ -14,7 +14,7 @@ const ListStudents = () => {
 	const indexOfLastItem = currentPage * itemsPerPage;
 	const indexOfFirstItem = indexOfLastItem - itemsPerPage;
 	const currentItems = listData.slice(indexOfFirstItem, indexOfLastItem);
-
+ 
 	const paginate = (pageNumber) => {
 		setCurrentPage(pageNumber);
 	};
