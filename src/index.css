@@ -17,16 +17,17 @@
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-    width: 4px;
+    width: 10px;
 }
 
 *::-webkit-scrollbar-track {
     scrollbar-color: var(--primary-blue);
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 *::-webkit-scrollbar-thumb {
     scrollbar-color: var(--primary-blue);
+    background-color: var(--primary-blue);
     border-radius: 30px;
     border: 3px solid var(--primary-blue);
 }

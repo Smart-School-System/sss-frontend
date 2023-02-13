@@ -20,7 +20,7 @@ module.exports = {
 				darkThemeTextLight: '#6a82ad',
 			},
 			boxShadow: {
-				custom: '1px 1px 10px rgba(0,0,0,0.07)'
+				custom: '1px 1px 30px rgba(0,0,0,0.08)'
 			}
 		},
 		screens: {
