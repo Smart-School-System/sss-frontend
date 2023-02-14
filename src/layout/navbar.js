@@ -8,7 +8,6 @@ import Toggle from '../components/commons/toggle';
 
 const Navbar = ({ leftValue }) => {
 	const [isPoped, setPoped] = useState(false);
-    
 	return (
 		<header className='navbar fixed left-40 right-0 top-0 z-30 bg-white dark:bg-darkTheme4 flex items-center space-x-20 px-12 h-32' style={{ left: leftValue }}>
 			<nav className="flex justify-between align-middle h-auto w-full">
