@@ -7,7 +7,6 @@ function App() {
 	return (
 		<HashRouter>
 			<AppRoutes />
-            
 		</HashRouter>
 	);
 }
