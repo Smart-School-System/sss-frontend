@@ -22,7 +22,7 @@ const DatePickerInput = (props) => {
 				{props.placeholder}<span className={'text-primaryBlue'}> *</span>
 			</label>
 			<input
-				id="floating_outlined" 
+				id='floating_outlined' 
 				type="text"
 				readOnly
 				autoComplete='off' 
