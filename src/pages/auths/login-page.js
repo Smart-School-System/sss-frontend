@@ -6,7 +6,6 @@ const LoginPage = () => {
 	return (
 		<div className='w-full h-screen overflow-hidden flex'>
 			<ImageCarousel/>
-            
 			<LoginForm/>
 		</div>
 	);
