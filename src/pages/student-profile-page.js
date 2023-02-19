@@ -1,4 +1,5 @@
 import React from 'react';
+import AdminLayout from '../layout/admin-layout';
 import AddressInfo from '../components/student-profile/address-info';
 import TopHeader from '../components/student-profile/header';
 import ParentInfo from '../components/student-profile/parent-info';
@@ -21,13 +22,15 @@ const StudentProfilePage = () => {
 		error ? message.error(error.message) : message.success('Student Added Successfully');
 	};
 	return (
-		<div className='w-full h-auto flex flex-col space-y-5'>
-			<TopHeader/>
-			<PersonalInfo/>
-			<AddressInfo/>
-			<ParentInfo/>
-			<Button action={validate}>Apply Changes</Button>
-		</div>
+		<AdminLayout>
+			<div className='w-full h-auto flex flex-col space-y-5'>
+				<TopHeader/>
+				<PersonalInfo/>
+				<AddressInfo/>
+				<ParentInfo/>
+				<Button action={validate}>Apply Changes</Button>
+			</div>
+		</AdminLayout>
 	);
 };
 
