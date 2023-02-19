@@ -1,8 +1,11 @@
 import React from 'react';
+import AdminLayout from '../layout/admin-layout';
 
 const StaffPage = () => {
 	return (
-		<h1>StaffPage</h1>
+		<AdminLayout>
+			<h1>StaffPage</h1>
+		</AdminLayout>
 	);
 };
 

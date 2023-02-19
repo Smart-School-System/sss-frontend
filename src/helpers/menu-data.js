@@ -5,7 +5,7 @@ import { IoSettings } from 'react-icons/io5';
 
 export const menuList = [
 	{
-		path: '',
+		path: 'dashboard',
 		name: 'Dashboard',
 		icon: <BsGridFill size={25}/>
 	},
