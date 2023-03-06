@@ -14,7 +14,7 @@ const ListStudents = () => {
 	const indexOfLastItem = currentPage * itemsPerPage;
 	const indexOfFirstItem = indexOfLastItem - itemsPerPage;
 	const currentItems = listData.slice(indexOfFirstItem, indexOfLastItem);
-
+ 
 	const paginate = (pageNumber) => {
 		setCurrentPage(pageNumber);
 	};
