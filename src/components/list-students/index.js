@@ -18,7 +18,7 @@ const ListStudents = () => {
 	const paginate = (pageNumber) => {
 		setCurrentPage(pageNumber);
 	};
-	return (  
+	return (
 		<div>
 			<div className='flex items-center justify-between my-5'>
 				<Filters viewType={viewType} setViewType={setViewType}/>
