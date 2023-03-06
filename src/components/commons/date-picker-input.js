@@ -24,7 +24,7 @@ const DatePickerInput = (props) => {
 			<input
 				id="floating_outlined" 
 				type="text"
-				readOnly 
+				readOnly
 				autoComplete='off' 
 				disabled={props.isDisabled}
 				className={`datepickerId block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-xl border-1 border-[#CCCDD0] appearance-none dark:text-white dark:border-darkThemeTextLight dark:focus:border-primaryBlue focus:outline-none focus:ring-0 focus:border-primaryBlue peer ${props.isDisabled ? 'hover:cursor-not-allowed dark:text-gray-500 dark:bg-darkTheme1 text-darkThemeTextLight' : 'hover:cursor-pointer dark:text-white'}`}
