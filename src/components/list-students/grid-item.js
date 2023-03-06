@@ -21,7 +21,6 @@ const GridItem = (props) => {
 				</div>
 			</div>
  
- 
 			<img src={user} alt="user profile pic" className='w-full h-auto rounded-full p-4' />
 			<div className='flex flex-col justify-center sm:items-center md:items-start text-justify space-y-2 dark:text-darkThemeTextLight font-light'>
 				<h1 className='font-normal text-xl'>{props.name}</h1>
