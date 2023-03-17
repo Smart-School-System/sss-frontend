@@ -3,10 +3,10 @@ import Wrapper from './wrapper';
 import InputFloat from '../commons/floating-input';
 import SelectInput from '../commons/select-input';
 import { parentRelationship } from '../../helpers/list-options';
-import { studentParentInfo1, studentParentInfo2 } from '../../store/actions/create-student';
 import { FaEdit } from 'react-icons/fa';
 import { IoSave } from 'react-icons/io5';
 import { data } from '../../helpers/data';
+import { Student } from '../../store/actions/create-student';
 
 const ParentInfo = () => {
 
@@ -48,10 +48,10 @@ const ParentInfo = () => {
 
 	return (
 		<>
-			<ParentComponent action={studentParentInfo1} data={{ ...data.parent[0] }} disabled={disabled1} setter={setDisabled1}/>
+			<ParentComponent action={Student} data={{ ...data.parent[0] }} disabled={disabled1} setter={setDisabled1}/>
 			{
-				data.parent[1] ? <ParentComponent action={studentParentInfo2} data={{ ...data.parent[1] }} disabled={disabled2} setter={setDisabled2}/> :
-					secondParent && <ParentComponent action={studentParentInfo2} data={{ ...sampleData }} disabled={disabled2} setter={setDisabled2}/>
+				data.parent[1] ? <ParentComponent action={Student} data={{ ...data.parent[1] }} disabled={disabled2} setter={setDisabled2}/> :
+					secondParent && <ParentComponent action={Student} data={{ ...sampleData }} disabled={disabled2} setter={setDisabled2}/>
 			}
 		</>
 	);

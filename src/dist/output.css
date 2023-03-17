@@ -1467,6 +1467,10 @@ input:checked + .toggle-bg {
   width: 1rem;
 }
 
+.w-52 {
+  width: 13rem;
+}
+
 .w-6 {
   width: 1.5rem;
 }
@@ -2183,6 +2187,11 @@ input:checked + .toggle-bg {
   line-height: 2rem;
 }
 
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
 .text-\[16px\] {
   font-size: 16px;
 }
@@ -2237,6 +2246,10 @@ input:checked + .toggle-bg {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.font-thin {
+  font-weight: 100;
 }
 
 .leading-6 {
