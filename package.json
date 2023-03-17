@@ -32,10 +32,7 @@
         "build": "react-scripts build",
         "craco-build": "craco build",
         "dev": "craco build && electron .",
-        "tailwind-watch": "tailwindcss -i ./src/index.css -o ./src/dist/output.css --watch",
-        "prepare": "husky install",
-        "lint": "eslint .",
-        "lint:fix": "eslint --fix --ext .js,.jsx ."
+        "tailwind-watch": "tailwindcss -i ./src/index.css -o ./src/dist/output.css --watch"
     },
     "eslintConfig": {
         "extends": [
@@ -58,13 +55,6 @@
     "devDependencies": {
         "@babel/eslint-parser": "^7.19.1",
         "electron": "^22.0.2",
-        "eslint": "^8.33.0",
-        "eslint-config-prettier": "^8.6.0",
-        "eslint-plugin-import": "^2.27.5",
-        "eslint-plugin-json": "^3.1.0",
-        "eslint-plugin-prettier": "^4.2.1",
-        "eslint-plugin-react": "^7.32.2",
-        "husky": "^8.0.3",
         "react-redux": "^8.0.5",
         "redux": "^4.2.1",
         "redux-devtools-extension": "^2.13.9",

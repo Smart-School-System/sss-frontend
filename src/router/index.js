@@ -7,24 +7,30 @@ import StudentsPage from '../pages/students-page';
 import AddStudentPage from '../pages/add-student-page';
 import StudentProfilePage from '../pages/student-profile-page';
 import LoginPage from '../pages/auths/login-page';
+import PageNotFound from '../pages/page-not-found';
+import ProtectedRoute from '../pages/protected-route';
 
 const AppRoutes = () => {
-	return (
-		<Routes>
-			{/* Admin Routes */}
-			<Route path='/dashboard' element={<DashboardPage />} />
-			<Route path='/student' element={<StudentsPage />} />
-			<Route path='/staff' element={<StaffPage />} />
-			<Route path='/settings' element={<SettingsPage />} />
-			<Route path='/new-student' element={<AddStudentPage />} />
-			<Route path='/student-profile' element={<StudentProfilePage />} />
-			{/* Admin Routes */}
+    return (
+        <Routes>
+            {/* Admin Protected Routes */}
+            <Route path='/dashboard' element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
+            <Route path='/student' element={<ProtectedRoute><StudentsPage /></ProtectedRoute>} />
+            <Route path='/staff' element={<ProtectedRoute><StaffPage /></ProtectedRoute>} />
+            <Route path='/settings' element={<ProtectedRoute><SettingsPage /></ProtectedRoute>} />
+            <Route path='/new-student' element={<ProtectedRoute><AddStudentPage /></ProtectedRoute>} />
+            <Route path='/student-profile' element={<ProtectedRoute><StudentProfilePage /></ProtectedRoute>} />
+            {/* Admin Protected Routes */}
 
 
-			{/* Auth Routes */}
-			<Route path='/' element={<LoginPage/>}/>
-		</Routes>
-	);
+            {/* Auth Routes */}
+            <Route path='/' element={<LoginPage />} />
+
+
+            {/* 404 Page Route */}
+            <Route path="*" element={<PageNotFound />}></Route>
+        </Routes>
+    );
 };
 
 export default AppRoutes;

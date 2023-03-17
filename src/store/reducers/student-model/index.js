@@ -1,12 +1,11 @@
-import { StudentPersonalInfo } from './student-personal';
-import { StudentAddressInfo } from './student-address';
-import { StudentParentInfo1, StudentParentInfo2 } from './student-parent';
+import { initialState } from './initial-state';
 
-export const StudentReducers = {
-	StudentPersonalInfo,
-	StudentAddressInfo,
-	StudentParentInfo1,
-	StudentParentInfo2
+export const StudentReducers = (state = initialState, action) => {
+    switch (action.type) {
+        case 'STUDENT':
+            return { ...state, ...action.payload };
+        default: return state;
+    }
 };
 
 export default StudentReducers;

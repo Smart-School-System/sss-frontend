@@ -10,11 +10,6 @@ import {useSelector} from 'react-redux';
 import {message} from 'antd';
 
 const StudentProfilePage = () => {
-	message.config({
-		top: 150,
-		duration: 2,
-		maxCount: 1,
-	});
 	const personal = useSelector(state => state.StudentPersonalInfo);
 	const validate = () => {
 		const {error} = studentSchema.validate({...personal});
