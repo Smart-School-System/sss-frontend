@@ -32,7 +32,6 @@ const AddStudentPage = () => {
     };
 
     const handleAddStudent = () => {
-        console.log(JSON.stringify({ student: studentDetails, parents }))
         if (validate().status === 200)
         API.POST('/students/', {student: studentDetails, parents})
         .then(response => message.success(response.message))
