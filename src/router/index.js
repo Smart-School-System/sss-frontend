@@ -14,12 +14,12 @@ const AppRoutes = () => {
     return (
         <Routes>
             {/* Admin Protected Routes */}
-            <Route path='/dashboard' element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
-            <Route path='/student' element={<ProtectedRoute><StudentsPage /></ProtectedRoute>} />
-            <Route path='/staff' element={<ProtectedRoute><StaffPage /></ProtectedRoute>} />
-            <Route path='/settings' element={<ProtectedRoute><SettingsPage /></ProtectedRoute>} />
-            <Route path='/new-student' element={<ProtectedRoute><AddStudentPage /></ProtectedRoute>} />
-            <Route path='/student-profile' element={<ProtectedRoute><StudentProfilePage /></ProtectedRoute>} />
+                <Route path='/dashboard' element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
+                <Route path='/student' element={<ProtectedRoute><StudentsPage /></ProtectedRoute>} />
+                <Route path='/staff' element={<ProtectedRoute><StaffPage /></ProtectedRoute>} />
+                <Route path='/settings' element={<ProtectedRoute><SettingsPage /></ProtectedRoute>} />
+                <Route path='/new-student' element={<ProtectedRoute><AddStudentPage /></ProtectedRoute>} />
+                <Route path='/student-profile' element={<ProtectedRoute><StudentProfilePage /></ProtectedRoute>} />
             {/* Admin Protected Routes */}
 
 

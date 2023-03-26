@@ -3,7 +3,7 @@ import { RiErrorWarningFill } from 'react-icons/ri';
 import { MdAdd } from 'react-icons/md';
 import { BsFileEarmarkArrowDownFill } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
-import Button from './button';
+import {Button} from './button';
 
 const JumbotronHeader = () => {
 	const navigate = useNavigate();
