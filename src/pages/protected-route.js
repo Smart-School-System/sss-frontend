@@ -1,17 +1,17 @@
-import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useEffect, useState, useRef } from 'react'
+import { useNavigate, Navigate } from 'react-router-dom'
 import { message } from 'antd';
+import { toast } from 'react-toastify';
 
 const ProtectedRoute = ({ children }) => {
-    const [authorized, setAuthorized] = useState(false)
-    const navigate = useNavigate()
+    const [auth, setAuth] = useState(localStorage.getItem('token'))
+
     useEffect(() => {
-        if (localStorage.getItem('token')) setAuthorized(true)
-        else {
-            navigate('/')
-            message.error('Access denied, please login.')
-        }
-    }, [navigate])
-    return (authorized && children)
+        setAuth(localStorage.getItem('token'))
+        !auth && toast.error("Access denied, please login first.")
+    }, [auth])
+    return auth ? children : <>
+        <Navigate to="/" />
+    </>;
 }
 export default ProtectedRoute

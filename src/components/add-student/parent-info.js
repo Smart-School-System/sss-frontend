@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Wrapper from './wrapper';
 import InputFloat from '../commons/floating-input';
-import Button from '../commons/button';
+import {Button} from '../commons/button';
 import SelectInput from '../commons/select-input';
 import { parentRelationship } from '../../helpers/list-options';
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FaBell, FaSignOutAlt, FaUserAlt } from 'react-icons/fa';
 import Logo from '../components/commons/logo';
 import user from '../assets/images/user.png';
@@ -8,11 +8,10 @@ import Toggle from '../components/commons/toggle';
 
 const Navbar = ({ leftValue }) => {
 	const [isPoped, setPoped] = useState(false);
-    const navigate = useNavigate()
 
     const handleSignOut = () => {
         localStorage.removeItem('token')
-        navigate('/')    
+        window.location.href = '/'
     }
 
 	return (
