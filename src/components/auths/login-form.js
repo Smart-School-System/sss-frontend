@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import Input from './form-input';
 import { BsEyeSlash, BsEye } from 'react-icons/bs';
 import Logo from '../commons/logo';
 import { Link, useNavigate } from 'react-router-dom';
 import { API } from '../../libs/axiosClient';
-import { message } from 'antd';
 import { LoaderButton } from '../commons/button';
 import { toast } from 'react-toastify';
 

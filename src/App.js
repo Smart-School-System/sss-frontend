@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { HashRouter } from 'react-router-dom';
 import AppRoutes from './router';
-import 'slick-carousel/slick/slick.css';
 import { API } from './libs/axiosClient';
 import { message } from 'antd';
 import { useDispatch } from 'react-redux';
