@@ -1,9 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Bin, Pencil } from '../commons/special-icons';
 
 const ListItem = (props) => {
+    const navigate = useNavigate()
+    const routeToStudentProfile = () => {
+        navigate(`/student/student-profile/${props.id}`)
+    }
 	return (
-		<div className='w-full bg-white dark:bg-transparent rounded-md flex items-center justify-center py-4 px-3 cursor-pointer dark:text-gray-400 font-light hover:bg-[#E7F4FE]/75 dark:hover:bg-darkTheme1' style={{transition: 'all 0.5s ease'}}>
+		<div className='w-full bg-white dark:bg-transparent rounded-md flex items-center justify-center py-4 px-3 cursor-pointer dark:text-gray-400 font-light hover:bg-[#E7F4FE]/75 dark:hover:bg-darkTheme1' style={{transition: 'all 0.5s ease'}} onClick={routeToStudentProfile}>
 			<div className="flex items-center justify-start space-x-10 flex-[1.43]">
 				<span>{props.id}</span>
 			</div>

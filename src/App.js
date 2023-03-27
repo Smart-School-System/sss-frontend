@@ -9,6 +9,7 @@ import {Preloader} from './components/commons/preloader';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css'
 import { toast } from 'react-toastify';
+import './App.css'
 
 message.config({
     duration: 2,
@@ -19,7 +20,7 @@ function App() {
     const [isLoading, setLoading] = useState(true)
     const dispatcher = useDispatch()
     useEffect(() => {
-        localStorage.getItem('theme') === null && localStorage.setItem('theme', 'light');
+        //localStorage.getItem('theme') === null && localStorage.setItem('theme', 'light');
         API.GET('/students')
             .then((response) => {
                 dispatcher(PopulateStudents(response.data.data))

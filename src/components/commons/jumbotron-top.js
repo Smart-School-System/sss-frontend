@@ -14,7 +14,7 @@ const JumbotronHeader = () => {
 				<span className='text-primaryBlue cursor-pointer hover:underline'>Learn more about adding a Student.</span>
 			</div>
 			<div className='flex items-center justify-end space-x-3'>
-				<Button action={() => navigate('/new-student')} url={'/new-student'}><MdAdd/><span>Add Student</span></Button>
+				<Button action={() => navigate('/student/new-student')} url={'/student/new-student'}><MdAdd/><span>Add Student</span></Button>
 				<Button bgVariant={'bg-transparent'} textVariant={'text-primaryBlue'}><BsFileEarmarkArrowDownFill /><span>Download Report</span></Button>
 			</div>
 		</div>

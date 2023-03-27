@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './node_modules/@syncfusion/ej2-react-spreadsheet/styles/material.css';
 :root {
     --primary-blue: #3786FB;
     --light-blue: '#E5F1FF';
