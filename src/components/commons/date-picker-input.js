@@ -12,7 +12,7 @@ const DatePickerInput = (props) => {
 		const datepickerEl = document.getElementsByClassName('datepickerId');
 		for(let i = 0; i < datepickerEl.length; i++) {
 			const newDate = new Datepicker(datepickerEl[i]);
-			newDate.config.format = 'dd/mm/yyyy';
+			newDate.config.format = 'yyyy-mm-dd';
 		}
 	}, []);
 	return (

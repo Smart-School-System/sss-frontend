@@ -6,9 +6,6 @@ import { message } from 'antd';
 import { useDispatch } from 'react-redux';
 import { PopulateStudents } from './store/actions/populate-students'
 import {Preloader} from './components/commons/preloader';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.min.css'
-import { toast } from 'react-toastify';
 import './App.css'
 
 message.config({
@@ -27,12 +24,11 @@ function App() {
                 setLoading(false)
             })
             .catch((error) => {
-                toast.error(error.message)
+                message.error(error.message)
             });
     }, [dispatcher]);
     return (
         <>
-            <ToastContainer key={1} limit={1} position="top-center" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light" />
             <HashRouter>
                 {
                     isLoading ? <Preloader /> :

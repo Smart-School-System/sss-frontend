@@ -1,9 +1,9 @@
 import Joi from 'joi';
 
 export const studentSchema = Joi.object({
-	firstname: Joi.string().required(),
-	lastname:  Joi.string().required(),
-	othername:  Joi.string(),
+	first_name: Joi.string().required(),
+	last_name:  Joi.string().required(),
+	other_name:  Joi.string(),
 	dob:  Joi.string().required(),
 	gender:  Joi.string().required(),
 	religion:  Joi.string().required(),
@@ -12,11 +12,7 @@ export const studentSchema = Joi.object({
 	height:  Joi.string().required(),
 	blood_group:  Joi.string().required(),
 	blood_genotype:  Joi.string().required(),
+    
 	residential_address:  Joi.string().required(),
 	postal_address:  Joi.string().required(),
-	parent_name:  Joi.string().required(),
-	phone_number_1:  Joi.string().required(),
-	phone_number_2:  Joi.string().required(),
-	email_address:  Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).required(),
-	relationship:  Joi.string().required(),
 });

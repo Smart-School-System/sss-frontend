@@ -6,9 +6,9 @@ import ParentInfo from '../components/student-profile/parent-info';
 import PersonalInfo from '../components/student-profile/personal-info-form';
 import { Button } from '../components/commons/button';
 import { useParams } from "react-router-dom";
-import { toast } from 'react-toastify';
 import { API } from '../libs/axiosClient';
 import { Preloader } from '../components/commons/preloader';
+import { message } from 'antd';
 
 
 const StudentProfilePage = () => {
@@ -22,7 +22,7 @@ const StudentProfilePage = () => {
                 setStudent((res.data.data))
                 setLoading(false)
             })
-            .catch(err => toast.error(err.message))
+            .catch(err => message.error(err.message))
     })
     return (
         <AdminLayout>

@@ -5,7 +5,7 @@ import Logo from '../commons/logo';
 import { Link, useNavigate } from 'react-router-dom';
 import { API } from '../../libs/axiosClient';
 import { LoaderButton } from '../commons/button';
-import { toast } from 'react-toastify';
+import { message } from 'antd';
 
 const LoginForm = () => {
     const [show, setShow] = useState(false);
@@ -21,14 +21,14 @@ const LoginForm = () => {
             .then((res) => {
                 if (res.status === 200) {
                     localStorage.setItem('token', res.data.data.access_token)
-                    toast.success(`Login ${res.data.message}`)
+                    message.success(`Login ${res.data.message}`)
                     navigate('/dashboard')
                 }
                 setLoading(false)
             })
             .catch(err => {
                 if (err?.response.data.detail) {
-                    toast.error(err.response.data.detail)
+                    message.error(err.response.data.detail)
                     setLoading(false)
                     return;
                 }

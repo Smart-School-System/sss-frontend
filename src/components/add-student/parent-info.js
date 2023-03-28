@@ -6,11 +6,10 @@ import SelectInput from '../commons/select-input';
 import { parentRelationship } from '../../helpers/list-options';
 import ParentFormModal from './parent-form-modal';
 
-const ParentInfo = () => {
-    const [parents, setParents] = useState([]);
+const ParentInfo = (props) => {
     const [name, setName] = useState('')
     const [occupation, setOccupation] = useState('')
-    const [email, setEmail] = useState('')
+    const [email_address, setEmail] = useState('')
     const [contact, setContact] = useState('')
     const [other_contact, setOtherContact] = useState('')
     const [familial_relation, setFamilialRelation] = useState('')
@@ -18,15 +17,15 @@ const ParentInfo = () => {
     const [modal, setModal] = useState(false)
 
     const handleChanges = useCallback(() => {
-        setParents([{
+        props.setParents([{
             name,
             occupation,
-            email,
+            email_address,
             contact,
             other_contact,
             familial_relation
         }])
-    }, [name, occupation, email, contact, other_contact, familial_relation])
+    }, [name, occupation, email_address, contact, other_contact, familial_relation])
 
 
     useEffect(() => {
@@ -35,16 +34,15 @@ const ParentInfo = () => {
 
 
     const addNewParent = (data) => {
-        setParents([...parents, data])
+        props.setParents([...props.parents, data])
     }
-    console.log(parents)
 
     return (
         <>
             <Wrapper label={familial_relation === '' ? 'Parent [Guardian\'s] Information' : `${familial_relation}'s Information`} >
                 <InputFloat placeholder={'Name'} value={name} triggerChange={setName} />
                 <InputFloat placeholder={'Occupation'} value={occupation} triggerChange={setOccupation} />
-                <InputFloat placeholder={'Email Address'} required={false} value={email} triggerChange={setEmail} />
+                <InputFloat placeholder={'Email Address'} required={false} value={email_address} triggerChange={setEmail} />
                 <InputFloat placeholder={'Contact'} required={false} value={contact} triggerChange={setContact} />
                 <InputFloat placeholder={'Other contact'} required={false} value={other_contact} triggerChange={setOtherContact} />
                 <SelectInput placeholder={'Relationship'} list={parentRelationship} value={familial_relation} triggerChange={(e) => setFamilialRelation(e.target.textContent)} />

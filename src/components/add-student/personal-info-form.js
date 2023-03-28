@@ -13,9 +13,9 @@ const PersonalInfo = () => {
 
 	return (
 		<Wrapper label={'Personal Information'}>
-			<InputFloat placeholder={'First Name'} value={personal.firstname} onChange={(e) => ({ firstname: e.target.value })} action={Student} />
-			<InputFloat placeholder={'Last Name'} value={personal.lastname} onChange={(e) => ({ lastname: e.target.value })} action={Student} />
-			<InputFloat placeholder={'Other Name'} value={personal.othername} required={false} onChange={(e) => ({ othername: e.target.value })} action={Student} />
+			<InputFloat placeholder={'First Name'} value={personal.first_name} onChange={(e) => ({ first_name: e.target.value })} action={Student} />
+			<InputFloat placeholder={'Last Name'} value={personal.last_name} onChange={(e) => ({ last_name: e.target.value })} action={Student} />
+			<InputFloat placeholder={'Other Name'} value={personal.other_name} required={false} onChange={(e) => ({ other_name: e.target.value })} action={Student} />
 			<DatePickerInput placeholder={'Date of Birth'} value={personal.dob} onSelect={(e) => ({ dob: e.target.value })} action={Student}/>
 			<SelectInput placeholder={'Gender'} list={genders} value={personal.gender}  onSelect={(e) => ({gender: e.target.textContent})} action={Student} />
 			<SelectInput placeholder={'Religion'} list={religions} value={personal.religion}  onSelect={(e) => ({religion: e.target.textContent})} action={Student} />

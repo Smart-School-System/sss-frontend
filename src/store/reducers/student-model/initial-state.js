@@ -1,7 +1,7 @@
 export const initialState = {
-    firstname: '',
-    lastname: '',
-    othername: '',
+    first_name: '',
+    last_name: '',
+    other_name: '',
     dob: '',
     gender: '',
     religion: '',
@@ -11,20 +11,5 @@ export const initialState = {
     blood_group: '',
     blood_genotype: '',
     residential_address: '',
-    postal_address: '',
-    parents: [
-        {
-            parent_name: '',
-            contact: '',
-            other_contact: '',
-            email_address: '',
-            familial_relation: '',
-        }, {
-            parent_name: '',
-            contact: '',
-            other_contact: '',
-            email_address: '',
-            familial_relation: '',
-        }
-    ]
+    postal_address: ''
 };
