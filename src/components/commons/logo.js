@@ -5,7 +5,7 @@ import logo from '../../assets/logo/logo.svg';
 const Logo = () => {
 	const navigate = useNavigate();
 	return (
-		<div className='flex justify-between items-center space-x-2 cursor-pointer' onClick={() => navigate('/')}>
+		<div className='flex justify-between items-center space-x-2 cursor-pointer' onClick={() => navigate('/dashboard')}>
 			<img src={logo} alt='app-logo'/>
 			<span className='font-black text-xl text-darkFontColor dark:text-darkThemeTextLight'>Schoolar</span>
 		</div>

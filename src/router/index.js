@@ -9,6 +9,7 @@ import StudentProfilePage from '../pages/student-profile-page';
 import LoginPage from '../pages/auths/login-page';
 import PageNotFound from '../pages/page-not-found';
 import ProtectedRoute from '../pages/protected-route';
+import ExcelSheet from '../pages/excel';
 
 const AppRoutes = () => {
     return (
@@ -18,8 +19,9 @@ const AppRoutes = () => {
                 <Route path='/student' element={<ProtectedRoute><StudentsPage /></ProtectedRoute>} />
                 <Route path='/staff' element={<ProtectedRoute><StaffPage /></ProtectedRoute>} />
                 <Route path='/settings' element={<ProtectedRoute><SettingsPage /></ProtectedRoute>} />
-                <Route path='/new-student' element={<ProtectedRoute><AddStudentPage /></ProtectedRoute>} />
-                <Route path='/student-profile' element={<ProtectedRoute><StudentProfilePage /></ProtectedRoute>} />
+                <Route path='/student/new-student' element={<ProtectedRoute><AddStudentPage /></ProtectedRoute>} />
+                <Route path='/student/student-profile/:id' element={<ProtectedRoute><StudentProfilePage /></ProtectedRoute>} />
+            <Route path='/some' element={<ProtectedRoute><ExcelSheet /></ProtectedRoute>} />
             {/* Admin Protected Routes */}
 
 

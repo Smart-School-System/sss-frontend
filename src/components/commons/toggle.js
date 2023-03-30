@@ -2,30 +2,27 @@ import React, { useEffect, useState } from 'react';
 import { BsMoonStarsFill, BsSunFill } from 'react-icons/bs';
 
 const Toggle = () => {
-    const [theme, setTheme] = useState(true);
+    const [theme, setTheme] = useState();
 
+    const handleToggle = () => {
 
-    useEffect(() => {
+        const color = theme ? 'light' : 'dark';
 
-        (() => {
-            theme && localStorage.setItem('theme', 'light');
-            !theme && localStorage.setItem('theme', 'dark');
+        theme && localStorage.setItem('theme', 'light');
+        !theme && localStorage.setItem('theme', 'dark');
 
-            if (localStorage.getItem('theme') === 'dark') {
-                document.documentElement.classList.add('dark');
-                document.documentElement.classList.remove('light');
-            } else {
-                document.documentElement.classList.add('light');
-                document.documentElement.classList.remove('dark');
-            }
-        })()
-    }, [theme]);
+        document.documentElement.className = color
+    }
+
     return (
-        <div className='rounded-full bg-slate-200 dark:bg-darkTheme2 w-10 h-10 flex items-center justify-center cursor-pointer' onClick={() => setTheme(prev => !prev)}>
+        <div className='rounded-full bg-slate-200 dark:bg-darkTheme2 w-10 h-10 flex items-center justify-center cursor-pointer' onClick={() => {
+            setTheme(prev => !prev)
+            handleToggle()
+        }}>
             {
                 theme ?
-                    <BsMoonStarsFill className={'text-greyFontColor dark:text-darkThemeTextLight text-xl'} /> :
-                    <BsSunFill className={'text-greyFontColor dark:text-darkThemeTextLight text-xl'} />
+                <BsSunFill className={'text-greyFontColor dark:text-darkThemeTextLight text-xl'} />:
+                    <BsMoonStarsFill className={'text-greyFontColor dark:text-darkThemeTextLight text-xl'} /> 
             }
         </div>
     );

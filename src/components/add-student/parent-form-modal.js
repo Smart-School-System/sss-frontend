@@ -1,12 +1,14 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import Wrapper from './wrapper';
-import InputFloat from '../commons/floating-input';
+import React, { useState } from 'react'
+import { message, Modal } from 'antd'
+import InputFloat from '../commons/floating-input'
+import SelectInput from '../commons/select-input'
+import Wrapper from './wrapper'
 import { Button } from '../commons/button';
-import SelectInput from '../commons/select-input';
-import { parentRelationship } from '../../helpers/list-options';
-import ParentFormModal from './parent-form-modal';
+import { parentRelationship } from '../../helpers/list-options'
+import { validateParentDetails } from '../../helpers/form-validations/parent-details'
 
-const ParentInfo = (props) => {
+
+const ParentFormModal = (props) => {
     const [name, setName] = useState('')
     const [occupation, setOccupation] = useState('')
     const [email_address, setEmail] = useState('')
@@ -14,30 +16,38 @@ const ParentInfo = (props) => {
     const [other_contact, setOtherContact] = useState('')
     const [familial_relation, setFamilialRelation] = useState('')
 
-    const [modal, setModal] = useState(false)
+    const handleClose = () => {
+        props.onClose()
+    }
 
-    const handleChanges = useCallback(() => {
-        props.setParents([{
+    const resetForm = () => {
+        setName('')
+        setOccupation('')
+        setOtherContact('')
+        setEmail('')
+        setFamilialRelation('')
+        setContact('')
+    }
+
+    const handleButtonClick = () => {
+        const { error } = validateParentDetails.validate({ name, occupation, email_address, contact, other_contact, familial_relation })
+        if(error) return message.error(error.message)
+
+        props.addNewParent({
             name,
             occupation,
             email_address,
             contact,
             other_contact,
             familial_relation
-        }])
-    }, [name, occupation, email_address, contact, other_contact, familial_relation])
-
-    useEffect(() => {
-        handleChanges()
-    }, [handleChanges])
-
-
-    const addNewParent = (data) => {
-        props.setParents([...props.parents, data])
+        })
+        message.success('Parent details recorded successfully')
+        resetForm()
+        props.onClose()
     }
 
     return (
-        <>
+        <Modal open={props.isOpen} onCancel={handleClose} footer={false} width={'80%'}>
             <Wrapper label={familial_relation === '' ? 'Parent [Guardian\'s] Information' : `${familial_relation}'s Information`} >
                 <InputFloat placeholder={'Name'} value={name} triggerChange={setName} />
                 <InputFloat placeholder={'Occupation'} value={occupation} triggerChange={setOccupation} />
@@ -47,11 +57,10 @@ const ParentInfo = (props) => {
                 <SelectInput placeholder={'Relationship'} list={parentRelationship} value={familial_relation} triggerChange={(e) => setFamilialRelation(e.target.textContent)} />
             </Wrapper >
             <div className="w-full flex item-center justify-end">
-                <Button action={() => setModal(prev => !prev)}>Add New Field</Button>
-                <ParentFormModal isOpen={modal} onClose={() => setModal(false)} addNewParent={addNewParent}/>
+                <Button action={handleButtonClick}>Add Parent</Button>
             </div>
-        </>
-    );
-};
+        </Modal>
+    )
+}
 
-export default ParentInfo;
+export default ParentFormModal

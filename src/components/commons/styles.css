@@ -85,3 +85,8 @@
     transform: rotate(360deg);
   }
 }
+
+.selected {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
