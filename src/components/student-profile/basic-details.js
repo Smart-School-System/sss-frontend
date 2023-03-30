@@ -2,7 +2,7 @@ import React from 'react'
 
 const BasicDetails = (props) => {
     return (
-        <div className="flex flex-col w-full rounded-md shadow-md hover:shadow-lg hover:scale-105 transition duration-500 ease-in-out">
+        <div className="flex flex-col w-full rounded-md shadow-md hover:shadow-lg hover:scale-105 transition duration-500 ease-in-out h-fit">
             <div className="flex justify-center w-full">
 
                 <div className="h-48 w-48 rounded-full overflow-hidden">
@@ -19,9 +19,7 @@ const BasicDetails = (props) => {
                 <p className="text-gray-500">STU2023690</p>
                 <p className="text-gray-500">Student of Class 3</p>
                 </div>
-                <p className="mt-4">
-                    
-                </p>
+                <p className="mt-4"></p>
             </div>
         </div>
 

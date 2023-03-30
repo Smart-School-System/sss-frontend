@@ -6,7 +6,7 @@ import user from '../assets/images/user.png';
 import './styles.css';
 import Toggle from '../components/commons/toggle';
 
-const Navbar = ({ leftValue }) => {
+const Navbar = ({ left }) => {
 	const [isPoped, setPoped] = useState(false);
 
     const handleSignOut = () => {
@@ -14,7 +14,7 @@ const Navbar = ({ leftValue }) => {
         window.location.href = '/'
     }
 	return (
-        <header className={`fixed right-0 left-0 md:left-[${leftValue}] top-0 z-30 bg-white dark:bg-darkTheme4 flex items-center space-x-20 px-12 h-32`}>
+        <header className={`fixed right-0 left-0 ${left} top-0 z-30 bg-white dark:bg-darkTheme4 flex items-center space-x-20 px-12 h-32`}>
 			<nav className='flex justify-between align-middle h-auto w-full'>
 				<Logo />
 				<div className='flex justify-end items-center space-x-6'>

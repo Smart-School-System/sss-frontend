@@ -8,7 +8,7 @@ const SideNav = ({ toggler }) => {
 	const [isCollapsed, setCollapsed] = useState(false);
     const location = useLocation();
 	return (
-        <aside className={`side-nav w-full p-0 flex justify-center items-center fixed  bottom-0 left-0 z-50 h-20 bg-white dark:bg-darkTheme1 ${isCollapsed ? 'md:px-0 md:w-20' : 'md:px-12 md:w-72'} md:fixed md:top-0 md:left-0 md:z-50 md:min-h-full`}>
+        <aside className={`side-nav w-full p-0 flex justify-center items-center fixed  bottom-0 left-0 z-50 h-20 bg-white dark:bg-darkTheme1 ${isCollapsed ? 'md:px-0 md:w-20' : 'md:px-12 md:w-60'} md:fixed md:top-0 md:left-0 md:z-50 md:min-h-full`}>
 			<div className='flex justify-around md:flex-col md:justify-center md:items-center md:space-y-8 md:w-full'>
 				{
 					menuList.map((item, index) => (
@@ -21,7 +21,7 @@ const SideNav = ({ toggler }) => {
 					))
 				}
 			</div>
-			<i className='hidden md:inline-block md:chevron-toggle md:cursor-pointer md:absolute md:transition-all' style={{ left: isCollapsed ? 64 : 272, top: '80%' }} onClick={() => setCollapsed(toggler)}>
+			<i className='hidden md:inline-block md:chevron-toggle md:cursor-pointer md:absolute md:transition-all' style={{ left: isCollapsed ? 64 : 224, top: '80%' }} onClick={() => setCollapsed(toggler)}>
 				{!isCollapsed ? <IoChevronBackCircleOutline className='text-primaryBlue text-2xl' /> : <IoChevronForwardCircleOutline className='text-primaryBlue text-2xl' />}
 			</i>
 		</aside>

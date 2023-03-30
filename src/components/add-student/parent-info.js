@@ -27,7 +27,6 @@ const ParentInfo = (props) => {
         }])
     }, [name, occupation, email_address, contact, other_contact, familial_relation])
 
-
     useEffect(() => {
         handleChanges()
     }, [handleChanges])

@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
+import Tabs from '../components/commons/tabs-toggle';
 import AdminLayout from '../layout/admin-layout';
 
 const SettingsPage = () => {
+    const [tab, setTab] = useState('Profile Details')
+
 	return (
 		<AdminLayout>
-			<div>SettingsPage</div>
+            <Tabs tabs={['Account Settings', 'User Roles', '', '']} getTab={setTab} />
+            <p>{tab}</p>
 		</AdminLayout>
 	);
 };

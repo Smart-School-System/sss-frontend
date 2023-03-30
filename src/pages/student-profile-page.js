@@ -37,11 +37,11 @@ const StudentProfilePage = () => {
                             <BasicDetails first_name={student.first_name} last_name={student.last_name} profileImage={sampleImage} />
                         </div>
                         <div className='flex flex-col flex-[0.7]'>
-                            <Tabs tabs={['Profile Details', 'Parent Details', 'Academic Details', 'Remarks']} getTab={setTab} />
-                            {tab === 'Profile Details' && <ProfileDetails />}
-                            {tab === 'Parent Details' && <p>Parent Details</p>}
-                            {tab === 'Academic Details' && <p>Academic Details</p>}
-                            {tab === 'Remarks' && <p>Remarks</p>}
+                            <Tabs tabs={['Profile Details', 'Parent Details', 'Academic Details', 'Archives']} getTab={setTab} />
+                                {tab === 'Profile Details' && <ProfileDetails />}
+                                {tab === 'Parent Details' && <p>Parent Details</p>}
+                                {tab === 'Academic Details' && <p>Academic Details</p>}
+                                {tab === 'Archives' && <p>Archives</p>}
                         </div>
                     </div>
             }
