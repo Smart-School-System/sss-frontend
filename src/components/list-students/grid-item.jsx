@@ -12,16 +12,6 @@ const GridItem = (props) => {
         navigate(`/student/student-profile/${props.id}`)
     }
     return (
-        //<div className='grid sm:grid-rows-2 sm:grid-cols-none md:grid-cols-2 md:grid-rows-none w-full p-4 justify-start rounded-2xl relative shadow-custom dark:shadow-none dark:border-[1px] dark:border-darkThemeTextLight/50'>
-        //    <div className='flex flex-col justify-center sm:items-center md:items-start text-justify space-y-2 dark:text-darkThemeTextLight font-light'>
-        //    <h1 className='font-normal text-xl'>{props.name}</h1>
-        //    <p className='text-base flex space-x-1'><span>{props.address}</span> <b>|</b> <span>{props.dob}</span></p>
-        //    <p className='text-base flex space-x-2'><span>{props.gender}</span><span>|</span><span>{props.class}</span></p>
-        //    </div>
-
-        //<button className='w-full dark:text-white border-2' onClick={routeToStudentProfile}>View Profile</button>*/}
-
-        //</div>
         <div className="flex flex-col md:flex-row bg-white dark:bg-darkTheme1 relative shadow-md rounded-lg overflow-hidden dark:text-darkThemeTextLight">
             {/* Hoverable dropdown component */}
             <div className='flex-[1] absolute top-5 right-5 flex justify-end items-center cursor-pointer bg-gray-200/75 dark:bg-darkTheme2 rounded-xl p-1 text-darkThemeTextLight/95 dark:text-darkThemeTextLight/50' onMouseEnter={() => setIsPopped(true)} onMouseLeave={() => setIsPopped(false)}>
@@ -41,9 +31,10 @@ const GridItem = (props) => {
                 <img src={user} alt="user profile pic" className='w-full h-auto rounded-full p-4' />
             </div>
             <div className="p-4 md:w-2/3">
-                <h2 className="font-medium text-2xl mb-2">{props.name}</h2>
-                <p className="text-gray-700 text-base mb-4">Student Bio or Details</p>
-                <p className="text-gray-700 text-base">Additional Info</p>
+                <h2 className="font-medium text-2xl mb-1">{props.name}</h2>
+                <p className="text-gray-700 text-base mb-1">{props.gender}</p>
+                <p className="text-gray-700 text-base">{props.dob}</p>
+                <button className='block w-1/2 my-4 bg-black rounded-lg p-1 dark:text-white border-2' onClick={routeToStudentProfile}>View Profile</button>
             </div>
         </div>
     );
