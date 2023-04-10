@@ -4,10 +4,10 @@ import { FaListUl } from 'react-icons/fa';
 import { BsGridFill } from 'react-icons/bs';
 import Search from '../commons/search-input';
 
-const Filters = ({viewType, setViewType}) => {
+const Filters = ({ viewType, setViewType, handleSearchFilter }) => {
 	return (
 		<div className='h-full flex justify-center items-center space-x-3'>
-			<Search />
+            <Search handleSearchFilter={handleSearchFilter}/>
 			<div className='flex justify-center items-center space-x-1 border-[1px] h-9 border-gray-300 text-black dark:text-darkThemeTextLight dark:border-darkThemeTextLight py-[5px] px-3 rounded-lg cursor-pointer'>
 				<MdFilterListAlt />
 				<span>Filter</span>
