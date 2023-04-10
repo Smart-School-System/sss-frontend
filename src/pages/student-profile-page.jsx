@@ -1,14 +1,13 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AdminLayout from '../layout/admin-layout';
-import { Button } from '../components/commons/button';
 import { useParams } from "react-router-dom";
-import { API } from '../libs/axiosClient';
+//import { API } from '../libs/axiosClient';
 import { Preloader } from '../components/commons/preloader';
 import Tabs from '../components/commons/tabs-toggle';
 import BasicDetails from '../components/student-profile/basic-details';
 import sampleImage from '../assets/images/cat.jpg'
 import ProfileDetails from '../components/student-profile/profile-details';
-import { message } from 'antd';
+//import { message } from 'antd';
 import { useSelector } from 'react-redux';
 
 
