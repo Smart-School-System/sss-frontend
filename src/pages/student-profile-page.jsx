@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import AdminLayout from '../layout/admin-layout';
 import { Button } from '../components/commons/button';
 import { useParams } from "react-router-dom";
@@ -9,7 +9,12 @@ import BasicDetails from '../components/student-profile/basic-details';
 import sampleImage from '../assets/images/cat.jpg'
 import ProfileDetails from '../components/student-profile/profile-details';
 import { message } from 'antd';
+import { useSelector } from 'react-redux';
 
+
+const selectStudentById = (state, id) => {
+    return state.PopulateStudents.find(student => student.id === id);
+}
 
 const StudentProfilePage = () => {
     const [student, setStudent] = useState({})
@@ -17,17 +22,24 @@ const StudentProfilePage = () => {
     const [tab, setTab] = useState('Profile Details')
     const id = useParams().id
 
-    useEffect(() => {
-        API.GET(`/students/student/${id}`)
-            .then(res => {
-                setStudent((res.data.data))
-                setLoading(false)
-            })
-            .catch(err => {
-                message.error(err.message)
-            })
-    })
+    const data = useSelector(state => selectStudentById(state, id));
+    console.log(data)
 
+
+    //useEffect(() => {
+    //    //API.GET(`/students/student/${id}`)
+    //    //    .then(res => {
+    //    //        setStudent((res.data.data))
+    //    //        setLoading(false)
+    //    //    })
+    //    //    .catch(err => {
+    //    //        message.error(err.message)
+    //    //    })
+
+    //    setStudent([...data])
+    //    console.log(data)
+    //    setLoading(false)
+    //})
     return (
         <AdminLayout>
             {
@@ -38,10 +50,10 @@ const StudentProfilePage = () => {
                         </div>
                         <div className='flex flex-col flex-[0.7]'>
                             <Tabs tabs={['Profile Details', 'Parent Details', 'Academic Details', 'Archives']} getTab={setTab} />
-                                {tab === 'Profile Details' && <ProfileDetails />}
-                                {tab === 'Parent Details' && <p>Parent Details</p>}
-                                {tab === 'Academic Details' && <p>Academic Details</p>}
-                                {tab === 'Archives' && <p>Archives</p>}
+                            {tab === 'Profile Details' && <ProfileDetails />}
+                            {tab === 'Parent Details' && <p>Parent Details</p>}
+                            {tab === 'Academic Details' && <p>Academic Details</p>}
+                            {tab === 'Archives' && <p>Archives</p>}
                         </div>
                     </div>
             }

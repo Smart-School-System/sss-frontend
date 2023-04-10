@@ -22,7 +22,7 @@ const GridItem = (props) => {
         //<button className='w-full dark:text-white border-2' onClick={routeToStudentProfile}>View Profile</button>*/}
 
         //</div>
-        <div class="flex flex-col md:flex-row bg-white dark:bg-darkTheme1 relative shadow-md rounded-lg overflow-hidden dark:text-darkThemeTextLight">
+        <div className="flex flex-col md:flex-row bg-white dark:bg-darkTheme1 relative shadow-md rounded-lg overflow-hidden dark:text-darkThemeTextLight">
             {/* Hoverable dropdown component */}
             <div className='flex-[1] absolute top-5 right-5 flex justify-end items-center cursor-pointer bg-gray-200/75 dark:bg-darkTheme2 rounded-xl p-1 text-darkThemeTextLight/95 dark:text-darkThemeTextLight/50' onMouseEnter={() => setIsPopped(true)} onMouseLeave={() => setIsPopped(false)}>
                 <BsThreeDotsVertical />
@@ -37,14 +37,13 @@ const GridItem = (props) => {
                 </div>
             </div>
 
-            <div class="md:w-1/3">
+            <div className="md:w-1/3">
                 <img src={user} alt="user profile pic" className='w-full h-auto rounded-full p-4' />
-                {/*<img src="student-profile-pic.jpg" alt="Student Profile Picture" class="w-full h-full object-cover object-center rounded-full">*/}
             </div>
-            <div class="p-4 md:w-2/3">
-                <h2 class="font-medium text-2xl mb-2">{props.name}</h2>
-                <p class="text-gray-700 text-base mb-4">Student Bio or Details</p>
-                <p class="text-gray-700 text-base">Additional Info</p>
+            <div className="p-4 md:w-2/3">
+                <h2 className="font-medium text-2xl mb-2">{props.name}</h2>
+                <p className="text-gray-700 text-base mb-4">Student Bio or Details</p>
+                <p className="text-gray-700 text-base">Additional Info</p>
             </div>
         </div>
     );

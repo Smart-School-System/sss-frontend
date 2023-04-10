@@ -30,13 +30,13 @@ const ListStudents = ({data}) => {
 			{
 				currentItems.map((item,_) => 
 					viewType === 'list' &&
-                    <ListItem key={_} id={item.id} name={`${item.first_name} ${item.last_name}`} gender={item.gender} class={item.class} dob={item.dob} address={`${item?.residential_address} ${item?.postal_address}`} /> 
+                    <ListItem key={_} id={item.id} name={`${item.first_name} ${item.last_name}`} gender={item.gender} className={item.class} dob={item.dob} address={`${item?.residential_address} ${item?.postal_address}`} /> 
 				)
 			}
 			<div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pb-12'>
 				{
 					currentItems.map((item, _) =>
-                        viewType === 'grid' && <GridItem key={_} name={`${item.first_name} ${item.last_name}`} gender={item.gender} class={item.class} dob={item.dob} address={`${item?.residential_address} ${item?.postal_address}`}/>
+                        viewType === 'grid' && <GridItem key={_} name={`${item.first_name} ${item.last_name}`} gender={item.gender} className={item.class} dob={item.dob} address={`${item?.residential_address} ${item?.postal_address}`}/>
 					)
 				}
 			</div>
